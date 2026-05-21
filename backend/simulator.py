@@ -14,13 +14,15 @@ FLOOR_H = 40.0
 
 # Zones drawn on the floor plan
 ZONES = [
-    {"id": "z1", "name": "Receiving Dock",   "x": 0,  "y": 0,  "w": 14, "h": 12, "color": "#1e3a5f"},
-    {"id": "z2", "name": "Staging Area",     "x": 0,  "y": 12, "w": 14, "h": 16, "color": "#1f2d1e"},
-    {"id": "z3", "name": "Rack Storage A",   "x": 14, "y": 0,  "w": 22, "h": 20, "color": "#2d1f0a"},
-    {"id": "z4", "name": "Rack Storage B",   "x": 14, "y": 20, "w": 22, "h": 20, "color": "#2d1f0a"},
-    {"id": "z5", "name": "Assembly Line",    "x": 36, "y": 0,  "w": 24, "h": 18, "color": "#1a1040"},
-    {"id": "z6", "name": "Shipping Dock",    "x": 36, "y": 22, "w": 24, "h": 18, "color": "#2d1212"},
-    {"id": "z7", "name": "QA Station",       "x": 14, "y": 20, "w": 8,  "h": 8,  "color": "#1a2d1a"},
+    {"id": "z1", "name": "Left Storage",    "x": 0,  "y": 0,  "w": 9,  "h": 34},
+    {"id": "z2", "name": "Upper Assembly",  "x": 9,  "y": 0,  "w": 38, "h": 20},
+    {"id": "z3", "name": "Right Storage",   "x": 47, "y": 0,  "w": 13, "h": 34},
+    {"id": "z4", "name": "Main Aisle",      "x": 0,  "y": 20, "w": 60, "h": 4},
+    {"id": "z5", "name": "Staging Area",    "x": 0,  "y": 24, "w": 15, "h": 12},
+    {"id": "z6", "name": "Assembly Line",   "x": 15, "y": 24, "w": 32, "h": 12},
+    {"id": "z7", "name": "QA Station",      "x": 47, "y": 24, "w": 13, "h": 12},
+    {"id": "z8", "name": "Receiving Dock",  "x": 0,  "y": 36, "w": 9,  "h": 4},
+    {"id": "z9", "name": "Shipping Dock",   "x": 51, "y": 36, "w": 9,  "h": 4},
 ]
 
 # Anchor points (BLE/UWB readers) mounted at known positions
@@ -34,21 +36,21 @@ ANCHORS = [
 
 # Waypoint routes each tag follows
 ROUTES = {
-    "TAG-001": [(3, 3), (3, 25), (12, 25), (12, 5), (3, 5), (3, 3)],
-    "TAG-002": [(20, 5), (45, 5), (45, 15), (20, 15), (20, 5)],
-    "TAG-003": [(40, 25), (55, 25), (55, 38), (40, 38), (40, 25)],
-    "TAG-004": [(16, 22), (34, 22), (34, 38), (16, 38), (16, 22)],
-    "TAG-005": [(20, 5), (20, 18), (34, 18), (34, 5), (20, 5)],
-    "TAG-006": [(3, 14), (12, 14), (12, 26), (3, 26), (3, 14)],
+    "TAG-001": [(3, 4), (3, 18), (8, 18), (8, 4), (3, 4)],           # Left Storage loop
+    "TAG-002": [(10, 4), (44, 4), (44, 18), (10, 18), (10, 4)],       # Upper Assembly loop
+    "TAG-003": [(52, 37), (58, 37), (58, 39), (52, 39), (52, 37)],    # Shipping Dock
+    "TAG-004": [(48, 4), (58, 4), (58, 32), (48, 32), (48, 4)],       # Right Storage loop
+    "TAG-005": [(16, 25), (45, 25), (45, 35), (16, 35), (16, 25)],    # Assembly Line loop
+    "TAG-006": [(2, 25), (12, 25), (12, 35), (2, 35), (2, 25)],       # Staging Area loop
 }
 
 TAG_META = {
-    "TAG-001": {"label": "Forklift Alpha",    "type": "Vehicle",   "color": "#3b82f6"},
-    "TAG-002": {"label": "Pallet Cart 02",    "type": "Equipment", "color": "#22c55e"},
-    "TAG-003": {"label": "Shipping Cart 03",  "type": "Equipment", "color": "#f59e0b"},
-    "TAG-004": {"label": "Rack Scanner 04",   "type": "Equipment", "color": "#d97757"},
-    "TAG-005": {"label": "Assembly Trolley",  "type": "Vehicle",   "color": "#818cf8"},
-    "TAG-006": {"label": "Staging Forklift",  "type": "Vehicle",   "color": "#06b6d4"},
+    "TAG-001": {"label": "Forklift Alpha",    "type": "Vehicle",   "color": "#2563eb"},
+    "TAG-002": {"label": "Pallet Cart 02",    "type": "Equipment", "color": "#d97706"},
+    "TAG-003": {"label": "Shipping Cart 03",  "type": "Equipment", "color": "#dc2626"},
+    "TAG-004": {"label": "Rack Scanner 04",   "type": "Equipment", "color": "#7c3aed"},
+    "TAG-005": {"label": "Assembly Trolley",  "type": "Vehicle",   "color": "#16a34a"},
+    "TAG-006": {"label": "Staging Forklift",  "type": "Vehicle",   "color": "#0d9488"},
 }
 
 
