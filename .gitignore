@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.db
+reports_output/
+node_modules/
+dist/
+.DS_Store
+*.egg-info/
+push_to_github.py
+requirements.txt
